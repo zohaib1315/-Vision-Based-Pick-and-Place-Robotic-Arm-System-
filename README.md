@@ -81,11 +81,6 @@ Camera → Image Processing → Coordinate Transformation → Inverse Kinematics
 
 ---
 
-## 📷 Demo
-(Add your project video link here — e.g., YouTube)
-
----
-
 ## 👨‍💻 Author
 **Zohaib Ahmed Mughal**  
 Electrical Engineering Student  
