@@ -54,6 +54,49 @@ Camera → Image Processing → Coordinate Transformation → Inverse Kinematics
 
 ---
 
+## ▶️ How to Run the Project
+
+The project is divided into three sequential MATLAB stages. Each stage must be executed in order for the system to function correctly.
+
+### 📂 Files
+- `stage1.m` — Vision Processing (Object Detection)
+- `stage2.m` — Coordinate Transformation (Pixel → World)
+- `stage3.m` — Control & Pick-and-Place Execution (Simulink + QArm)
+
+---
+
+### 🔄 Execution Order
+
+1. **Run Stage 1**
+   - Captures camera input
+   - Detects object using image processing
+   - Outputs object pixel coordinates
+
+2. **Run Stage 2**
+   - Converts pixel coordinates into real-world coordinates
+   - Uses camera calibration parameters
+
+3. **Run Stage 3**
+   - Performs inverse kinematics
+   - Executes pick-and-place using Quanser QArm
+   - Runs Simulink control model
+
+---
+
+### ⚠️ Important Notes
+- All stages must be run **in sequence (Stage 1 → Stage 2 → Stage 3)**
+- Do not skip any stage
+- Ensure camera is connected before running Stage 1
+- Ensure Quanser QArm hardware and QUARC are properly configured before Stage 3
+
+---
+
+### 💡 Tip
+For best results:
+- Keep all files in the same working directory
+- Run MATLAB as administrator (if using QUARC)
+- Use a fixed-step solver in Simulink for stable real-time execution
+
 ## 📈 Results
 - Successfully achieved real-time object detection and tracking
 - Accurate object localization using calibrated camera
